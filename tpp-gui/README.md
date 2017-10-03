@@ -1,5 +1,5 @@
 --------
-The Trans-Proteomic Pipeline 5.0 (TPP) with web interface
+The Trans-Proteomic Pipeline 5.0 (TPP) with web interface and openssh-server
 
 Links:
 -------
