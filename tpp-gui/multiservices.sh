@@ -1,25 +1,17 @@
 #!/bin/bash
 
-# create web user
-echo 'isJ.9rULcz1qI' > /local/tpp/users/victorng/.password 
-echo 'isvrZZeXRoRDk' > /local/tpp/users/victorng_std1/.password 
-echo 'isvrZZeXRoRDk' > /local/tpp/users/victorng_std2/.password 
+# create an web user
+mkdir /local/tpp/users/user1
+
+echo `perl gen_tpp_web_passwd.pl YOURPASSWORD` > /local/tpp/users/user1/.password 
 chown -R www-data.www-data log users 
-chmod -R 777 /local/data /local/tpp/users/*
 
 # add users
-useradd -d /home/victorng      -s /bin/tcsh -m victorng
-useradd -d /home/victorng_std1 -s /bin/tcsh -m victorng_std1
-useradd -d /home/victorng_std2 -s /bin/tcsh -m victorng_std2
+useradd -d /home/user1 -s /bin/tcsh -m user1
 
-chown -R victorng.victorng      /home/victorng
-chown -R victorng.victorng_std1 /home/victorng_std1
-chown -R victorng.victorng_std2 /home/victorng_std2
+chown -R user1.user1      /home/user1
 
-echo 'root:Nymu732!'|chpasswd
-echo 'victorng:Nymu732!'|chpasswd
-echo 'victorng_std1:ProtNymu732!'|chpasswd
-echo 'victorng_std2:ProtNymu732!'|chpasswd
+echo 'user1:YOURPASSWORD'|chpasswd
 
 # Start the first process
 /usr/sbin/sshd -D &
