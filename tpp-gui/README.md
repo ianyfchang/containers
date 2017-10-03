@@ -1,11 +1,13 @@
 --------
-TPP with web interface
+The Trans-Proteomic Pipeline 5.0 (TPP) with web interface
 
 Links:
 -------
 base image              : http://biocontainers.pro/
 
 TPP                     : http://tools.proteomecenter.org/wiki/index.php?title=Software:TPP
+
+TPP Installation        : http://tools.proteomecenter.org/wiki/index.php?title=TPP_5.0.0:_Installing_on_Ubuntu_16.04
 
 License
 ----------
