@@ -21,7 +21,7 @@ RUN apt-get update && \
     apt-get -y upgrade && \
     apt-get install -y apt-utils libfindbin-libs-perl subversion make g++ g++-4.9    \
                        build-essential zlib1g-dev libghc-bzlib-dev gnuplot \
-                       unzip expat libexpat1-dev \
+                       unzip expat libexpat1-dev xsltproc \
                        apache2 openssh-server tcsh vim && \
     apt-get clean all && \
     apt -y autoremove
